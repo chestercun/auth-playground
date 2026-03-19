@@ -1,0 +1,15 @@
+services:
+
+  idp:
+    build: .
+    command: python oidc_sim.py idp
+    ports:
+      - "9000:9000"
+
+  sp:
+    build: .
+    command: python oidc_sim.py sp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - idp

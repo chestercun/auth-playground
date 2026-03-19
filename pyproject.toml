@@ -1,0 +1,16 @@
+[project]
+name = "auth-playground"
+version = "0.1.0"
+description = "Auth Playground"
+requires-python = ">=3.12"
+authors = [{ name = "Chester Cun" }]
+
+dependencies = [
+    "flask",
+    "pyjwt",
+    "requests",
+]
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
