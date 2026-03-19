@@ -2,6 +2,10 @@
 
 A playground for auth concepts.
 
+## TODO
+- Fix the warning about not using a production WSGI server.
+- Move oidc_sim.py into src/ and break it apart into individual files.
+
 ## One-time
 
 ```
