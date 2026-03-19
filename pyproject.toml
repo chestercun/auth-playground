@@ -6,6 +6,8 @@ requires-python = ">=3.12"
 authors = [{ name = "Chester Cun" }]
 
 dependencies = [
+    "click",
+    "cryptography",
     "flask",
     "pyjwt",
     "requests",
