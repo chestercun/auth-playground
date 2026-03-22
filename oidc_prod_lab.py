@@ -201,9 +201,6 @@ class KeyStore:
         return {"keys": keys}
 
 
-keystore = KeyStore()
-
-
 ###############################################################################
 # PKCE
 ###############################################################################
@@ -219,6 +216,8 @@ def pkce_challenge(verifier: str) -> str:
 
 def create_idp() -> Flask:
     app = Flask("idp")
+
+    keystore = KeyStore()
 
     tenants = {
         "acme": {
