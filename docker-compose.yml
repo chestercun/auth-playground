@@ -2,13 +2,13 @@ services:
 
   idp:
     build: .
-    command: python oidc_sim.py idp
+    command: python oidc_prod_lab.py idp
     ports:
       - "9000:9000"
 
   sp:
     build: .
-    command: python oidc_sim.py sp
+    command: python oidc_prod_lab.py sp
     ports:
       - "8000:8000"
     depends_on:
