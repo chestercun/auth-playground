@@ -2,13 +2,13 @@ services:
 
   idp:
     build: .
-    command: python oidc_prod_lab.py idp
+    command: ["gunicorn", "--bind", "0.0.0.0:9000", "--access-logfile", "-", "--error-logfile", "-", "oidc_prod_lab:create_idp()"]
     ports:
       - "9000:9000"
 
   sp:
     build: .
-    command: python oidc_prod_lab.py sp
+    command: ["gunicorn", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--error-logfile", "-", "oidc_prod_lab:create_sp()"]
     ports:
       - "8000:8000"
     depends_on:
